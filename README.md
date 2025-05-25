@@ -1,44 +1,46 @@
-# RERA Odisha Projects Scraper
+# Odisha RERA Project Scraper
 
-This Python script scrapes the first 6 "Projects Registered" from the [Odisha RERA website](https://rera.odisha.gov.in/projects/project-list) using Playwright.
+This Python script uses Selenium to scrape the first 6 projects listed on the [Odisha RERA Projects List](https://rera.odisha.gov.in/projects/project-list) website. It collects the following details for each project by navigating through their respective "View Details" pages:
 
-## Features
+- **RERA Regd. No.**
+- **Project Name**
+- **Promoter Name** (Company Name under Promoter Details)
+- **Promoter Address** (Registered Office Address)
+- **GST No.**
 
-- Extracts the following details from the first 6 registered projects:
-  - Project Name
-  - RERA Registration Number
-  - Promoter Name
-  - Promoter Address
-  - Promoter GST Number
+## 🔧 Requirements
 
-## Why Playwright?
+- Python 3.7+
+- Google Chrome browser installed
+- ChromeDriver (managed automatically via `webdriver-manager`)
 
-Playwright is used instead of Selenium because:
-- No external drivers are needed
-- Better support for JavaScript-heavy websites
-- Faster execution and easier installation
-- Built-in headless mode and browser management
+### 📦 Required Python Packages
 
-## Requirements
+- `selenium`
+- `webdriver-manager`
 
-Install dependencies using:
+## 🚀 Setup Instructions
 
-```bash
-pip install -r requirements.txt
-```
+1. **Clone the repository or unzip the downloaded ZIP.**
+2. **Install dependencies** (in your terminal or command prompt):
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Then install the required browsers for Playwright:
+3. **Run the script**:
+   ```bash
+   python scrape_orera.py
+   ```
 
-```bash
-playwright install
-```
+## 📄 Notes
 
-## How to Run
+- The script uses `webdriver-manager` to automatically handle downloading and setting up ChromeDriver. Ensure your Chrome browser is up-to-date.
+- If you prefer to manually manage ChromeDriver, make sure it's available in your system's PATH.
 
-Run the scraper with:
+## ✅ Output
 
-```bash
-python scrape_rera.py
-```
+The script will print the scraped details for the first 6 projects directly to the terminal.
 
-This will launch a headless browser, scrape the required data, and print it to the console.
+---
+
+This project is for internship submission purposes.
