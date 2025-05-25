@@ -41,6 +41,3 @@ This Python script uses Selenium to scrape the first 6 projects listed on the [O
 
 The script will print the scraped details for the first 6 projects directly to the terminal.
 
----
-
-This project is for internship submission purposes.
